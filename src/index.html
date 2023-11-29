@@ -57,60 +57,58 @@
             </div>
         </div>
     </nav>
-
     <!-- Contenido del cuerpo aquí -->
 
-    <!-- Lista de Organizaciones -->
+    <!-- Lista de Pacientes -->
     <div class="container p-4 mt-5">
         <div class="row">
             <div class="col-md-6 offset-md-3 mt-5">
-                <ul class="list-group Organizaciones"></ul>
+                <ul class="list-group Pacientes"></ul>
             </div>
         </div>
     </div>
 
     <!-- MODAL DE ACTUALIZACIÓN -->
-    <div class="modal fade" id="ActualizarOrganizacion" tabindex="-1" aria-labelledby="exampleModalLabel"
+    <div class="modal fade" id="ActualizarPaciente" tabindex="-1" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content bg-dark text-light">
                 <div class="modal-header bg-dark">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Actualizar Organización</h1>
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Actualizar Paciente</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form id="Formulario-ActualizarOrganizacion">
+                    <form id="Formulario-ActualizarPaciente">
                         <div class="mb-3">
-                            <label for="Actualizar-Nombre">Nombre de la Organización</label>
+                            <label for="Actualizar-Nombre">Nombre del Paciente</label>
                             <input type="text" id="Actualizar-Nombre" class="form-control mb-3"
                                 placeholder="Ingresa el nuevo nombre">
                         </div>
                         <div class="mb-3">
-                            <label for="Actualizar-Integrantes">Número de Integrantes</label>
-                            <input type="number" id="Actualizar-Integrantes" class="form-control mb-3"
-                                placeholder="Ingresa el nuevo número de integrantes">
+                            <label for="Actualizar-Edad">Edad</label>
+                            <input type="number" id="Actualizar-Edad" class="form-control mb-3"
+                                placeholder="Ingresa la nueva edad">
                         </div>
                         <div class="mb-3">
-                            <label for="Actualizar-Lider">Líder</label>
-                            <input type="text" id="Actualizar-Lider" class="form-control mb-3"
-                                placeholder="Ingresa el nuevo líder">
+                            <label for="Actualizar-Enfermedad">Enfermedad</label>
+                            <input type="text" id="Actualizar-Enfermedad" class="form-control mb-3"
+                                placeholder="Ingresa la nueva enfermedad">
                         </div>
                         <div class="mb-3">
-                            <label for="Actualizar-NumeroAliados">Número de Aliados</label>
-                            <input type="number" id="Actualizar-NumeroAliados" class="form-control mb-3"
-                                placeholder="Ingresa el nuevo número de aliados">
+                            <label for="Actualizar-DoctorACargo">Doctor a Cargo</label>
+                            <input type="text" id="Actualizar-DoctorACargo" class="form-control mb-3"
+                                placeholder="Ingresa el nuevo doctor a cargo">
                         </div>
                         <div class="mb-3">
-                            <label for="Actualizar-FechaContratacion">Fecha de Contratación</label>
-                            <input type="date" id="Actualizar-FechaContratacion" class="form-control mb-3">
+                            <label for="Actualizar-FechaIngreso">Fecha de Ingreso</label>
+                            <input type="date" id="Actualizar-FechaIngreso" class="form-control mb-3">
                         </div>
-                        <button class="btn btn-primary w-100 mb-2 edit Boton-ActualizarOrganizacion">Actualizar</button>
+                        <button class="btn btn-primary w-100 mb-2 edit Boton-ActualizarPaciente">Actualizar</button>
                     </form>
                 </div>
             </div>
         </div>
     </div>
-
 
     <!-- MODAL DE INICIO DE SESION -->
     <div class="modal fade" id="InicioSesion" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

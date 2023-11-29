@@ -2,35 +2,35 @@ import { collection, addDoc } from "https://www.gstatic.com/firebasejs/10.6.0/fi
 import { db } from "./firebase.js";
 
 window.addEventListener('DOMContentLoaded', () => {
-    const formularioOrganizacion = document.querySelector('#Formulario-Organizacion');
+    const formularioPaciente = document.querySelector('#Formulario-Paciente');
 
-    formularioOrganizacion.addEventListener('submit', async (e) => {
+    formularioPaciente.addEventListener('submit', async (e) => {
         e.preventDefault();
 
-        const NOMBRE = formularioOrganizacion['Nombre-Organizacion'].value;
-        const INTEGRANTES = parseInt(formularioOrganizacion['Integrantes-Organizacion'].value);
-        const LIDER = formularioOrganizacion['Lider-Organizacion'].value;
-        const NUMERO_ALIADOS = parseInt(formularioOrganizacion['NumeroAliados-Organizacion'].value);
-        const FECHA_CONTRATACION = formularioOrganizacion['Fecha-Contratacion-Organizacion'].value;
+        const NOMBRE = formularioPaciente['Nombre-Paciente'].value;
+        const EDAD = parseInt(formularioPaciente['Edad-Paciente'].value);
+        const ENFERMEDAD = formularioPaciente['Enfermedad-Paciente'].value;
+        const DOCTOR_A_CARGO = formularioPaciente['DoctorACargo-Paciente'].value;
+        const FECHA_INGRESO = formularioPaciente['FechaIngreso-Paciente'].value;
 
         try {
             // Utiliza addDoc para agregar un documento con un identificador generado automáticamente
-            const nuevaOrganizacionRef = await addDoc(collection(db, 'Organizaciones'), {
+            const nuevoPacienteRef = await addDoc(collection(db, 'Pacientes'), {
                 Nombre: NOMBRE,
-                Integrantes: INTEGRANTES,
-                Lider: LIDER,
-                NumeroAliados: NUMERO_ALIADOS,
-                FechaContratacion: FECHA_CONTRATACION
+                Edad: EDAD,
+                Enfermedad: ENFERMEDAD,
+                DoctorACargo: DOCTOR_A_CARGO,
+                FechaIngreso: FECHA_INGRESO
             });
 
             // Muestra un mensaje si todo sale bien
-            alert(`La organización ${NOMBRE} ha sido registrada exitosamente`);
+            alert(`El paciente ${NOMBRE} ha sido registrado exitosamente`);
 
             // Limpia el formulario
-            formularioOrganizacion.reset();
+            formularioPaciente.reset();
         } catch (error) {
             // Maneja el error y muestra un mensaje con el error
-            alert('Error al registrar la organización:', 'noValido');
+            alert('Error al registrar el paciente:', 'noValido');
         }
     });
 });
